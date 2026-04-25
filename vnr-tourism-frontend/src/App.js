@@ -1,0 +1,26 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Analytics from './pages/Analytics';
+import Recommendations from './pages/Recommendations';
+import './App.css';
+
+function App() {
+  return (
+    <Router>
+      <div className="app">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/recommendations" element={<Recommendations />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
